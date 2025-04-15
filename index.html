@@ -54,10 +54,12 @@
       text-align: left;
     }
 
-    .mission-card h1 {
-      font-size: 2.3rem;
-      margin-bottom: 20px;
+    .mission-card h1,
+    .focus-section h2,
+    .contact-card h2 {
+      font-size: 2rem;
       text-align: center;
+      margin-bottom: 25px;
     }
 
     .mission-card p {
@@ -65,10 +67,41 @@
       line-height: 1.8;
     }
 
-    .contact-card h2 {
-      font-size: 1.8rem;
+    .focus-section {
+      margin-bottom: 50px;
+    }
+
+    .focus-cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .focus-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      max-width: 260px;
+      transition: transform 0.2s ease;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .focus-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .focus-card p {
+      color: #003366;
+      padding: 18px;
+      font-size: 1rem;
       text-align: center;
-      margin-bottom: 20px;
     }
 
     form {
@@ -116,7 +149,17 @@
       margin-top: 30px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+      .focus-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .focus-card {
+        width: 100%;
+        max-width: 90%;
+      }
+
       .mission-card h1 {
         font-size: 1.7rem;
       }
@@ -148,6 +191,24 @@
       </p>
     </div>
 
+    <div class="focus-section">
+      <h2>Our Focus Areas</h2>
+      <div class="focus-cards">
+        <div class="focus-card">
+          <img src="focus-selfdefense.png" alt="Self Defense Training" />
+          <p>Community physical health and self-defense skills for confidence and resilience.</p>
+        </div>
+        <div class="focus-card">
+          <img src="focus-firearmtraining.png" alt="Firearm Safety" />
+          <p>Legal firearms education and training for Jewish Canadians in safe, structured environments.</p>
+        </div>
+        <div class="focus-card">
+          <img src="focus-advocacy.png" alt="Advocacy & Empowerment" />
+          <p>Advocacy to help all members of our community feel confident, protected, and heard.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="contact-card">
       <h2>Contact Us</h2>
       <form action="https://formsubmit.co/info@jsafecanada.org" method="POST">
@@ -160,7 +221,7 @@
     </div>
 
     <footer>
-      &copy; 2025 JSAFE Canada. All rights reserved.
+      &copy; 2024 JSAFE Canada. All rights reserved.
     </footer>
   </div>
 
