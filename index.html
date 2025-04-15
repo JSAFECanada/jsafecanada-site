@@ -1,80 +1,106 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>JSAFE Canada</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="landing is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JSAFE Canada</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f9;
+      color: #222;
+    }
 
-			<!-- Header -->
-			<header id="header" class="alt">
-				<h1><a href="#">JSAFE Canada</a></h1>
-			</header>
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-			<!-- Hero Section -->
-			<section id="banner">
-				<h2>JSAFE Canada</h2>
-				<p>Jewish Security, Advocacy, and Firearms Education</p>
-				<ul class="actions special">
-					<li><a href="#mission" class="button primary">Learn More</a></li>
-				</ul>
-			</section>
+    .logo {
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 30px auto;
+    }
 
-			<!-- Mission Section -->
-			<section id="mission" class="wrapper style1 special">
-				<div class="inner">
-					<header class="major">
-						<h2>Our Mission</h2>
-						<p>
-							JSAFE Canada is a federally incorporated not-for-profit organization dedicated to the safety, empowerment, and dignity of Jewish Canadians.
-							Through community-based self-defense and security, legal firearms education, and principled advocacy, we provide the tools and training our communities
-							need to remain strong, confident, and protected.
-						</p>
-					</header>
-				</div>
-			</section>
+    h1 {
+      color: #003366;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
 
-			<!-- Contact Section -->
-			<section id="contact" class="wrapper style2 special">
-				<div class="inner">
-					<header class="major">
-						<h2>Contact Us</h2>
-						<p>For questions, support, or to get involved, reach out to us anytime.</p>
-					</header>
-					<ul class="actions special">
-						<li><a href="mailto:info@jsafecanada.org" class="button primary">Email Us</a></li>
-					</ul>
-				</div>
-			</section>
+    p {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
 
-			<!-- Construction Notice -->
-			<section id="comingsoon" class="wrapper style3 special">
-				<div class="inner">
-					<h3>🚧 Site Under Construction</h3>
-					<p>Our full platform is coming soon. Thank you for your patience and support.</p>
-				</div>
-			</section>
+    .contact-form {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="mailto:info@jsafecanada.org" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<p>&copy; 2024 JSAFE Canada. All rights reserved.</p>
-			</footer>
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
-		</div>
+    button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+    button:hover {
+      background-color: #005599;
+    }
 
-	</body>
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="JSAFE Canada Logo" class="logo" />
+
+    <h1>JSAFE Canada</h1>
+
+    <p>
+      JSAFE Canada will soon be a federally incorporated not-for-profit organization dedicated to the safety, empowerment, and dignity of Jewish Canadians. Through community-based self-defense and security, legal firearms education, and principled advocacy, we provide the tools and training our communities need to remain strong, confident, and protected.
+    </p>
+
+    <div class="contact-form">
+      <form action="https://formspree.io/f/mwkgbpqv" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <footer>
+      &copy; 2024 JSAFE Canada. All rights reserved.
+    </footer>
+  </div>
+</body>
 </html>
