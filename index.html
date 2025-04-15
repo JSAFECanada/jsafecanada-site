@@ -4,92 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>JSAFE Canada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f6f9;
-      color: #222;
+      font-family: 'Inter', sans-serif;
+      background-color: #003366;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      width: 100%;
+      max-width: 800px;
+      padding: 40px 20px 60px 20px;
       text-align: center;
     }
 
     .logo {
-      max-width: 280px;
+      max-width: 320px;
       width: 100%;
       height: auto;
-      margin: 0 auto 30px auto;
+      margin: 60px auto 40px auto;
+      display: block;
     }
 
-    h1 {
+    .mission-card,
+    .contact-card {
+      background: rgba(255, 255, 255, 0.95);
       color: #003366;
-      font-size: 2.5rem;
+      padding: 30px 20px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .mission-card h1 {
+      font-size: 2.2rem;
       margin-bottom: 20px;
     }
 
-    p {
+    .mission-card p {
       font-size: 1.2rem;
-      color: #333;
-      line-height: 1.6;
-      margin-bottom: 40px;
+      line-height: 1.7;
     }
 
-    .contact-form {
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: 0 auto;
+    .contact-card form {
+      display: flex;
+      flex-direction: column;
     }
 
     input, textarea {
-      width: 100%;
       padding: 12px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      margin: 10px 0;
       font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
     }
 
     button {
       background-color: #003366;
       color: white;
       border: none;
-      padding: 12px 30px;
+      padding: 14px;
       font-size: 1rem;
-      border-radius: 5px;
+      border-radius: 6px;
+      margin-top: 10px;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: #005599;
+      background-color: #005299;
     }
 
     footer {
-      margin-top: 60px;
+      color: #cccccc;
       font-size: 0.9rem;
-      color: #888;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .mission-card h1 {
+        font-size: 1.6rem;
+      }
+
+      .mission-card p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <img src="logo.png" alt="JSAFE Canada Logo" class="logo" />
+
   <div class="container">
-    <img src="logo.png" alt="JSAFE Canada Logo" class="logo" />
+    <div class="mission-card">
+      <h1>Our Mission</h1>
+      <p>
+        JSAFE Canada will soon be a federally incorporated not-for-profit organization dedicated to the safety, empowerment, and dignity of Jewish Canadians.
+        Through community-based self-defense and security, legal firearms education, and principled advocacy, we provide the tools and training our communities
+        need to remain strong, confident, and protected.
+      </p>
+    </div>
 
-    <h1>JSAFE Canada</h1>
-
-    <p>
-      JSAFE Canada will soon be a federally incorporated not-for-profit organization dedicated to the safety, empowerment, and dignity of Jewish Canadians. Through community-based self-defense and security, legal firearms education, and principled advocacy, we provide the tools and training our communities need to remain strong, confident, and protected.
-    </p>
-
-    <div class="contact-form">
+    <div class="contact-card">
+      <h2>Contact Us</h2>
       <form action="https://formspree.io/f/mwkgbpqv" method="POST">
         <input type="text" name="name" placeholder="Your name" required />
         <input type="email" name="email" placeholder="Your email" required />
@@ -102,5 +125,6 @@
       &copy; 2024 JSAFE Canada. All rights reserved.
     </footer>
   </div>
+
 </body>
 </html>
