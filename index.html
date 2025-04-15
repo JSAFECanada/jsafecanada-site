@@ -21,22 +21,22 @@
 
     .container {
       width: 100%;
-      max-width: 850px;
+      max-width: 880px;
       padding: 40px 20px 60px 20px;
       text-align: center;
     }
 
     .logo-banner {
-      background-color: #f1f2f2;
-      border-radius: 12px;
-      padding: 40px 20px;
+      background: linear-gradient(to bottom, #f1f2f2 60%, #e9eaeb 100%);
+      border-radius: 18px;
+      padding: 60px 30px 50px 30px;
       margin-top: 60px;
-      margin-bottom: 40px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      margin-bottom: 50px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
     }
 
     .logo {
-      max-width: 420px;
+      max-width: 480px;
       width: 100%;
       height: auto;
       display: block;
@@ -45,34 +45,41 @@
 
     .mission-card,
     .contact-card {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.98);
       color: #003366;
-      padding: 30px 25px;
+      padding: 35px 30px;
       margin-bottom: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      text-align: left;
     }
 
     .mission-card h1 {
       font-size: 2.3rem;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .mission-card p {
-      font-size: 1.25rem;
-      line-height: 1.75;
+      font-size: 1.2rem;
+      line-height: 1.8;
     }
 
-    .contact-card form {
+    .contact-card h2 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
       display: flex;
       flex-direction: column;
-      margin-top: 20px;
     }
 
     input, textarea {
       padding: 14px;
       margin: 10px 0;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       border-radius: 6px;
       border: 1px solid #ccc;
       font-family: 'Inter', sans-serif;
@@ -94,6 +101,14 @@
       background-color: #005299;
     }
 
+    .location-note {
+      font-size: 0.95rem;
+      margin-top: 20px;
+      color: #003366;
+      text-align: center;
+      font-style: italic;
+    }
+
     footer {
       color: #cccccc;
       font-size: 0.9rem;
@@ -106,12 +121,13 @@
         font-size: 1.7rem;
       }
 
-      .mission-card p {
+      .mission-card p,
+      .location-note {
         font-size: 1rem;
       }
 
       .logo {
-        max-width: 280px;
+        max-width: 300px;
       }
     }
   </style>
@@ -140,6 +156,7 @@
         <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
         <button type="submit">Send Message</button>
       </form>
+      <p class="location-note">JSAFE Canada is based in Toronto, Ontario.</p>
     </div>
 
     <footer>
