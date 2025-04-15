@@ -23,12 +23,21 @@
       text-align: center;
     }
 
+    .logo-banner {
+      background-color: #f4f4f4;
+      border-radius: 12px;
+      padding: 40px 20px;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
     .logo {
-      max-width: 320px;
+      max-width: 400px;
       width: 100%;
       height: auto;
-      margin: 60px auto 40px auto;
       display: block;
+      margin: 0 auto;
     }
 
     .mission-card,
@@ -37,7 +46,7 @@
       color: #003366;
       padding: 30px 20px;
       margin-bottom: 40px;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
@@ -94,14 +103,20 @@
       .mission-card p {
         font-size: 1rem;
       }
+
+      .logo {
+        max-width: 280px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <img src="logo.png" alt="JSAFE Canada Logo" class="logo" />
-
   <div class="container">
+    <div class="logo-banner">
+      <img src="logo.png" alt="JSAFE Canada Logo" class="logo" />
+    </div>
+
     <div class="mission-card">
       <h1>Our Mission</h1>
       <p>
