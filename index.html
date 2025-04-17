@@ -2,229 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JSAFE Canada</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: sans-serif;
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #003366;
-      background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M50 3l14.43 24.95H35.57L50 3zm0 94l14.43-24.95H35.57L50 97zm24.95-79.43L89.9 50 74.95 75.43 65.57 59.86 74.95 44.29 89.9 50 74.95 24.57zm-49.9 0L10.1 50l14.95 25.43 9.38-15.57-9.38-15.57L10.1 50l14.95-25.43z'/%3E%3C/g%3E%3C/svg%3E");
-      background-repeat: repeat;
-      background-size: 150px 150px;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background-color: #f4f6f9;
+      color: #222;
     }
-
-    .container {
-      width: 100%;
-      max-width: 880px;
-      padding: 40px 20px 60px 20px;
+    header {
+      background-color: #dadfe5;
+      padding: 2rem;
       text-align: center;
     }
-
-    .logo-banner {
-      background: linear-gradient(to bottom, #f1f2f2 60%, #e9eaeb 100%);
-      border-radius: 18px;
-      padding: 40px 25px;
-      margin-top: 50px;
-      margin-bottom: 40px;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-    }
-
-    .logo {
-      max-width: 420px;
-      width: 100%;
+    header img {
+      max-width: 250px;
       height: auto;
-      display: block;
-      margin: 0 auto;
     }
-
-    .mission-card,
-    .contact-card {
-      background: rgba(255, 255, 255, 0.98);
-      color: #003366;
-      padding: 35px 30px;
-      margin-bottom: 40px;
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      text-align: left;
-    }
-
-    .mission-card h1,
-    .focus-section h2,
-    .contact-card h2 {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .mission-card p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-    }
-
-    .focus-section {
-      margin-bottom: 50px;
-    }
-
-    .focus-cards {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .focus-card {
-      background: #ffffff;
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-      overflow: hidden;
-      max-width: 260px;
-      transition: transform 0.2s ease;
+      box-shadow: 0 0 12px rgba(0,0,0,0.05);
     }
-
-    .focus-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .focus-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .focus-card p {
-      color: #003366;
-      padding: 18px;
-      font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.5;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    input, textarea {
-      padding: 14px;
-      margin: 10px 0;
-      font-size: 1.05rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-family: 'Inter', sans-serif;
-    }
-
-    button {
-      background-color: #003366;
-      color: white;
-      border: none;
-      padding: 16px;
-      font-size: 1.1rem;
-      border-radius: 6px;
-      margin-top: 12px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    button:hover {
-      background-color: #005299;
-    }
-
-    .location-note {
-      font-size: 0.95rem;
-      margin-top: 20px;
-      color: #003366;
+    h2 {
       text-align: center;
-      font-style: italic;
+      color: #2c3e50;
     }
-
+    .safe-section {
+      margin-top: 2rem;
+    }
+    .safe-block {
+      margin-bottom: 1.5rem;
+    }
+    .images {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .image-box {
+      width: 240px;
+      text-align: center;
+    }
+    .image-box img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
     footer {
-      color: #cccccc;
+      text-align: center;
+      padding: 1rem;
       font-size: 0.9rem;
-      padding: 20px;
-      margin-top: 30px;
-    }
-
-    @media (max-width: 700px) {
-      .focus-cards {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .focus-card {
-        width: 100%;
-        max-width: 90%;
-      }
-
-      .mission-card h1 {
-        font-size: 1.7rem;
-      }
-
-      .mission-card p,
-      .location-note {
-        font-size: 1rem;
-      }
-
-      .logo {
-        max-width: 300px;
-      }
+      color: #777;
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="logo-new.png" alt="JSAFE Canada Logo">
+  </header>
 
-  <div class="container">
-    <div class="logo-banner">
-      <img src="logo-new.png" alt="JSAFE Canada Logo" class="logo" />
-    </div>
+  <section>
+    <h2>JSAFE Canada</h2>
+    <p style="text-align: center;">
+      JSAFE Canada is a grassroots initiative committed to Jewish security, strength, and solidarity. Through physical training, coordinated action, mental discipline, and community enrichment, we empower Jewish Canadians to live with purpose, confidence, and unity.
+    </p>
 
-    <div class="mission-card">
-      <h1>Our Mission</h1>
-      <p>
-        JSAFE Canada will soon be a federally incorporated not-for-profit organization dedicated to the safety, empowerment, and dignity of Jewish Canadians.
-        Through community-based self-defense and security, legal firearms education, and principled advocacy, we provide the tools and training our communities
-        need to remain strong, confident, and protected.
-      </p>
-    </div>
-
-    <div class="focus-section">
-      <h2>Our Focus Areas</h2>
-      <div class="focus-cards">
-        <div class="focus-card">
-          <img src="focus-selfdefense.jpg" alt="Self Defense Training" />
-          <p>Community physical wellness and accessible self-defense programs for safety and preparedness.</p>
-        </div>
-        <div class="focus-card">
-          <img src="focus-firearmtraining.jpg" alt="Firearm Safety" />
-          <p>Educational training in legal firearm use and safety through licensed ranges and certified instructors.</p>
-        </div>
-        <div class="focus-card">
-          <img src="focus-advocacy.jpg" alt="Advocacy & Empowerment" />
-          <p>Advocating for Jewish Canadians of all ages to feel secure, supported, and empowered in daily life.</p>
-        </div>
+    <div class="safe-section">
+      <div class="safe-block">
+        <strong>S – Security:</strong>
+        <p>Self-defense. Physical strength. Confidence through readiness and training.</p>
+      </div>
+      <div class="safe-block">
+        <strong>A – Action:</strong>
+        <p>We move with intention. We take initiative. We don’t wait to be protected — we show up for ourselves and each other.</p>
+      </div>
+      <div class="safe-block">
+        <strong>F – Focus:</strong>
+        <p>Mental discipline. Emotional steadiness. Awareness under pressure. Because strength starts in the mind.</p>
+      </div>
+      <div class="safe-block">
+        <strong>E – Enrichment:</strong>
+        <p>Through learning and connection, we build a strong, aware, and unified community — one that grows more confident and resilient together.</p>
       </div>
     </div>
 
-    <div class="contact-card">
-      <h2>Contact Us</h2>
-      <form action="https://formsubmit.co/info@jsafecanada.org" method="POST">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
-        <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <p class="location-note">JSAFE Canada is based in Toronto, Ontario.</p>
+    <div class="images">
+      <div class="image-box">
+        <img src="focus-selfdefense.jpg" alt="Self Defense Training">
+        <p>Train your body and mind through discipline and readiness.</p>
+      </div>
+      <div class="image-box">
+        <img src="focus-firearmtraining.jpg" alt="Fitness & Strength">
+        <p>Build strength, endurance, and security through physical challenge.</p>
+      </div>
+      <div class="image-box">
+        <img src="focus-advocacy.jpg" alt="Community Empowerment">
+        <p>Learn, connect, and grow stronger as a united Jewish community.</p>
+      </div>
     </div>
+  </section>
 
-    <footer>
-      &copy; 2025 JSAFE Canada. All rights reserved.
-    </footer>
-  </div>
-
+  <footer>
+    &copy; 2025 JSAFE Canada. All rights reserved.
+  </footer>
 </body>
 </html>
