@@ -2,128 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JSAFE Canada</title>
   <style>
     body {
+      font-family: sans-serif;
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0b1f3a;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      background-color: #f4f6f9;
+      color: #222;
     }
-
     header {
-      background-color: #122b4f;
-      padding: 40px 20px;
+      background-color: #dadfe5;
+      padding: 2rem;
       text-align: center;
     }
-
     header img {
-      width: 120px;
+      max-width: 250px;
       height: auto;
-      margin-bottom: 20px;
     }
-
-    h1 {
-      font-size: 2.4em;
-      margin: 0;
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.05);
     }
-
-    .slogan {
-      font-size: 1.1em;
-      font-weight: 300;
-      margin-top: 10px;
-      color: #b0c4de;
-    }
-
-    main {
-      flex: 1;
-      padding: 40px 20px;
+    h2 {
       text-align: center;
-      background: linear-gradient(180deg, #0b1f3a 0%, #1c2e4f 100%);
+      color: #2c3e50;
     }
-
-    .content {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.1em;
-      line-height: 1.6;
+    .safe-section {
+      margin-top: 2rem;
     }
-
-    .location {
-      margin-top: 20px;
-      font-size: 1em;
-      color: #cccccc;
+    .safe-block {
+      margin-bottom: 1.5rem;
     }
-
-    form {
-      margin-top: 40px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+    .images {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1.5rem;
     }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 4px;
-      font-size: 1em;
+    .image-box {
+      width: 240px;
+      text-align: center;
     }
-
-    input[type="submit"] {
-      background-color: #1e90ff;
-      color: white;
-      cursor: pointer;
-      margin-top: 20px;
+    .image-box img {
+      max-width: 100%;
+      border-radius: 8px;
     }
-
-    input[type="submit"]:hover {
-      background-color: #4682b4;
-    }
-
     footer {
-      background-color: #0b1f3a;
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #888888;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="JSAFE Canada Logo" />
-    <h1>JSAFE Canada</h1>
-    <div class="slogan">Safety. Action. Focus. Enrichment.</div>
+    <img src="logo-new.png" alt="JSAFE Canada Logo">
   </header>
 
-  <main>
-    <div class="content">
-      <p>
-        JSAFE Canada is a national initiative committed to strengthening Jewish communities across Canada by empowering individuals through proactive safety and self-defence training, community action, focused mental resilience, and enrichment.
-      </p>
-      <p>
-        We stand for physical preparedness, coordinated advocacy, and meaningful Jewish pride. We believe in deliberate, confident, and united action.
-      </p>
-      <p>
-        We are building safer and stronger Jewish communities — together.
-      </p>
+  <section>
+    <h2>JSAFE Canada</h2>
+    <p style="text-align: center;">
+      JSAFE Canada is a grassroots initiative committed to Jewish security, strength, and solidarity. Through physical training, coordinated action, mental discipline, and community enrichment, we empower Jewish Canadians to live with purpose, confidence, and unity.
+    </p>
 
-      <div class="location">Toronto, Ontario</div>
-
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="_replyto" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-        <input type="submit" value="Send Message" />
-      </form>
+    <div class="safe-section">
+      <div class="safe-block">
+        <strong>S – Security:</strong>
+        <p>Self-defense. Physical strength. Confidence through readiness and training.</p>
+      </div>
+      <div class="safe-block">
+        <strong>A – Action:</strong>
+        <p>We move with intention. We take initiative. We don’t wait to be protected — we show up for ourselves and each other.</p>
+      </div>
+      <div class="safe-block">
+        <strong>F – Focus:</strong>
+        <p>Mental discipline. Emotional steadiness. Awareness under pressure. Because strength starts in the mind.</p>
+      </div>
+      <div class="safe-block">
+        <strong>E – Enrichment:</strong>
+        <p>Through learning and connection, we build a strong, aware, and unified community — one that grows more confident and resilient together.</p>
+      </div>
     </div>
-  </main>
+
+    <div class="images">
+      <div class="image-box">
+        <img src="focus-selfdefense.jpg" alt="Self Defense Training">
+        <p>Train your body and mind through discipline and readiness.</p>
+      </div>
+      <div class="image-box">
+        <img src="focus-firearmtraining.jpg" alt="Fitness & Strength">
+        <p>Build strength, endurance, and security through physical challenge.</p>
+      </div>
+      <div class="image-box">
+        <img src="focus-advocacy.jpg" alt="Community Empowerment">
+        <p>Learn, connect, and grow stronger as a united Jewish community.</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 JSAFE Canada. All rights reserved.
