@@ -203,10 +203,12 @@
       </div>
     </div>
 
-    <!-- ✅ LIVE FORM: Replace with your own Formspree link when ready -->
-    <form action="https://formspree.io/f/mayvlknn" method="POST">
+    <!-- ✅ Working Contact Form via FormSubmit -->
+    <form action="https://formsubmit.co/info@jsafecanada.org" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
       <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
       <input type="submit" value="Send Message" />
     </form>
