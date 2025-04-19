@@ -12,16 +12,21 @@
       color: #1b3555;
     }
 
+    .logo-header {
+      background-color: #e5e3e0;
+      text-align: center;
+      padding: 30px 20px 20px 20px;
+    }
+
+    .logo-header img {
+      width: 180px;
+      height: auto;
+    }
+
     header {
       background-color: #1b3555;
       padding: 40px 20px;
       text-align: center;
-    }
-
-    header img {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
     }
 
     h1 {
@@ -110,12 +115,14 @@
     }
 
     input[type="submit"] {
+      width: 100%;
       background-color: #1b3555;
       color: white;
       font-weight: bold;
       cursor: pointer;
       margin-top: 20px;
       border: none;
+      padding: 12px;
     }
 
     input[type="submit"]:hover {
@@ -150,8 +157,11 @@
 </head>
 <body>
 
-  <header>
+  <div class="logo-header">
     <img src="logo-newest.png" alt="JSAFE Canada Logo" />
+  </div>
+
+  <header>
     <h1>JSAFE Canada</h1>
     <div class="pill">SAFETY. ACTION. FOCUS. ENRICHMENT.</div>
     <div class="tagline">Confidence Through Community</div>
